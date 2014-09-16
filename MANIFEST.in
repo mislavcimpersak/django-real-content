@@ -1,0 +1,8 @@
+include LICENSE
+include README.md
+recursive-include real_content/fixtures *
+recursive-include real_content/management *
+recursive-include real_content/migrations *
+recursive-include real_content/templates *
+recursive-include real_content/templatetags *
+recursive-include docs *

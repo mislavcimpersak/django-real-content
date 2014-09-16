@@ -1,0 +1,5 @@
+{% if paragraphs %}
+    {% for paragraph in paragraphs %}
+        <p{% if css_class %} class="{{ css_class }}"{% endif %}>{{ paragraph }}</p>
+    {% endfor %}
+{% endif %}
