@@ -7,7 +7,7 @@ Template tags to quickly show real content instead of lorem ipsum.
 ## Instalation
 ```
 pip install -e git+https://github.com/mislavcimpersak/django-real-content#egg=django-real-content
-python manage.py migrate django-real-content
+python manage.py migrate real_content
 ```
 
 Add "real_content" to your INSTALLED_APPS setting and `DRC_LANGUAGE` setting (if none is set, english will be used).
@@ -96,3 +96,4 @@ Currently there are ~20 titles and ~100 paragraphs with variable lengths per lan
 - tests
 - translations
 - add more languages
+- pypi
