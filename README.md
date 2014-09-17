@@ -17,7 +17,7 @@ INSTALLED_APPS = (
         'real_content',
     )
 
-DRC_LANGUAGE = 'en'
+DRC_LANGUAGE = 'hr'
 ```
 
 ## usage:
