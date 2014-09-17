@@ -94,8 +94,7 @@ Currently there are ~20 titles and ~100 paragraphs with variable lengths per lan
 - en: http://en.wikipedia.org
 
 ## TODO
-- load fixtures in migration
 - tests
-- translations
+- translation strings
 - add more languages
 - pypi
