@@ -10,12 +10,14 @@ pip install -e git+https://github.com/mislavcimpersak/django-real-content#egg=dj
 python manage.py migrate django-real-content
 ```
 
-Add "real_content" to your INSTALLED_APPS setting
+Add "real_content" to your INSTALLED_APPS setting and `DRC_LANGUAGE` setting (if none is set, english will be used).
 ```
 INSTALLED_APPS = (
         ...
         'real_content',
     )
+
+DRC_LANGUAGE = 'en'
 ```
 
 ## usage:
@@ -84,7 +86,7 @@ python manage.py drc_addcontent -u http://www.24sata.hr/a-383985 -l hr
 
 ## Content sources
 
-Currently there are 20 titles and 100 paragraphs with variable lengths per language. Initial content was taken from random Wikipedia articles (featured articles of the day / latest improved articles).
+Currently there are ~20 titles and ~100 paragraphs with variable lengths per language. Initial content was taken from random Wikipedia articles (featured articles of the day / latest improved articles).
 
 - hr: http://hr.wikipedia.org
 - en: http://en.wikipedia.org

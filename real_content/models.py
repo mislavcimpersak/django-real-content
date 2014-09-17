@@ -4,8 +4,9 @@ from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from .managers import RandomManager
 from .choices import Choices
+from .managers import RandomManager
+from .settings import DRC_LANGUAGE
 
 
 class Language(models.Model):
@@ -47,7 +48,7 @@ class Language(models.Model):
                 else:
                     languages = []
         else:
-            languages = Language.get_languages(settings.DRC_LANGUAGE)
+            languages = Language.get_languages(DRC_LANGUAGE)
         if single:
             return languages[0]
         else:
