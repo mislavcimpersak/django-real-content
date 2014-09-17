@@ -2,7 +2,7 @@
 
 Template tags to quickly show real content instead of lorem ipsum.
 
-## Instalation
+## Installation
 ```
 pip install -e git+https://github.com/mislavcimpersak/django-real-content#egg=django-real-content
 ```
