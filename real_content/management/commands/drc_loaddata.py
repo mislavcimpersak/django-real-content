@@ -14,7 +14,11 @@ python manage.py drc_loaddata -d paragraphs_en -l en -c paragraph
 """
 
 class Command(BaseCommand):
-    help = u""" go """
+    help = u"""
+    Loads data from local files. File should contain one title/paragraph per line.
+
+    python manage.py drc_loaddata -d local_file -l en -c title
+    """
     option_list = BaseCommand.option_list + (
         make_option('-d', '--doc', action='store', dest='doc',
             help=u'file to parse'),
