@@ -19,7 +19,7 @@ INSTALLED_APPS = (
 ```
 
 ## usage:
-
+Load django-real-content in your template.
 ```
 {% load drc %}
 ```
