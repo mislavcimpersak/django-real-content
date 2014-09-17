@@ -4,7 +4,7 @@ Template tags to quickly show real content instead of lorem ipsum.
 
 *** still broken  - don't use just yet ;) ***
 
-## instalation
+## Instalation
 ```
 pip install -e git+https://github.com/mislavcimpersak/django-real-content#egg=django-real-content
 python manage.py migrate django-real-content
@@ -20,7 +20,7 @@ INSTALLED_APPS = (
 DRC_LANGUAGE = 'hr'
 ```
 
-## usage:
+## Usage:
 Load django-real-content in your template.
 ```
 {% load drc %}
