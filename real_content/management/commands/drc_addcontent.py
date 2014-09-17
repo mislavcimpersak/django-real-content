@@ -4,7 +4,7 @@ from optparse import make_option
 
 from django.core.management import BaseCommand
 
-from realcontent.utils import parse_url
+from real_content.utils import parse_url
 
 
 class Command(BaseCommand):
@@ -13,7 +13,7 @@ class Command(BaseCommand):
         If no language is provided, it will use the one given in settings.
         
         Example:
-        ./manage.py realcontent_addcontent -u http://www.24sata.hr/a-383985 -l hr
+        ./manage.py drc_addcontent -u http://www.24sata.hr/a-383985 -l hr
         """
 
     option_list = BaseCommand.option_list + (

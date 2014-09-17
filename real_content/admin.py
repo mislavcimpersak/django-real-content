@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 
-from realcontent.models import Language, Content
+from real_content.models import Language, Content
 
 
 class LanguageAdmin(admin.ModelAdmin):

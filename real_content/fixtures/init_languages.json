@@ -4,7 +4,7 @@
         "short": "af_ZA",
         "name": "Afrikaans"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 1
 },
 {
@@ -12,7 +12,7 @@
         "short": "gn_PY",
         "name": "Guaraní"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 2
 },
 {
@@ -20,7 +20,7 @@
         "short": "ay_BO",
         "name": "Aymara"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 3
 },
 {
@@ -28,7 +28,7 @@
         "short": "az_AZ",
         "name": "Azeri"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 4
 },
 {
@@ -36,7 +36,7 @@
         "short": "id_ID",
         "name": "Indonesian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 5
 },
 {
@@ -44,7 +44,7 @@
         "short": "ms_MY",
         "name": "Malay"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 6
 },
 {
@@ -52,7 +52,7 @@
         "short": "jv_ID",
         "name": "Javanese"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 7
 },
 {
@@ -60,7 +60,7 @@
         "short": "bs_BA",
         "name": "Bosnian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 8
 },
 {
@@ -68,7 +68,7 @@
         "short": "ca_ES",
         "name": "Catalan"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 9
 },
 {
@@ -76,7 +76,7 @@
         "short": "cs_CZ",
         "name": "Czech"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 10
 },
 {
@@ -84,7 +84,7 @@
         "short": "ck_US",
         "name": "Cherokee"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 11
 },
 {
@@ -92,7 +92,7 @@
         "short": "cy_GB",
         "name": "Welsh"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 12
 },
 {
@@ -100,7 +100,7 @@
         "short": "da_DK",
         "name": "Danish"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 13
 },
 {
@@ -108,7 +108,7 @@
         "short": "se_NO",
         "name": "Northern Sámi"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 14
 },
 {
@@ -116,7 +116,7 @@
         "short": "de_DE",
         "name": "German"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 15
 },
 {
@@ -124,7 +124,7 @@
         "short": "et_EE",
         "name": "Estonian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 16
 },
 {
@@ -132,7 +132,7 @@
         "short": "en_IN",
         "name": "English (India)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 17
 },
 {
@@ -140,7 +140,7 @@
         "short": "en_GB",
         "name": "English (UK)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 18
 },
 {
@@ -148,7 +148,7 @@
         "short": "en_US",
         "name": "English (US)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 19
 },
 {
@@ -156,7 +156,7 @@
         "short": "es_LA",
         "name": "Spanish"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 20
 },
 {
@@ -164,7 +164,7 @@
         "short": "es_CL",
         "name": "Spanish (Chile)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 21
 },
 {
@@ -172,7 +172,7 @@
         "short": "es_CO",
         "name": "Spanish (Colombia)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 22
 },
 {
@@ -180,7 +180,7 @@
         "short": "es_ES",
         "name": "Spanish (Spain)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 23
 },
 {
@@ -188,7 +188,7 @@
         "short": "es_MX",
         "name": "Spanish (Mexico)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 24
 },
 {
@@ -196,7 +196,7 @@
         "short": "es_VE",
         "name": "Spanish (Venezuela)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 25
 },
 {
@@ -204,7 +204,7 @@
         "short": "eo_EO",
         "name": "Esperanto"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 26
 },
 {
@@ -212,7 +212,7 @@
         "short": "eu_ES",
         "name": "Basque"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 27
 },
 {
@@ -220,7 +220,7 @@
         "short": "tl_PH",
         "name": "Filipino"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 28
 },
 {
@@ -228,7 +228,7 @@
         "short": "fo_FO",
         "name": "Faroese"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 29
 },
 {
@@ -236,7 +236,7 @@
         "short": "fr_FR",
         "name": "French (France)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 30
 },
 {
@@ -244,7 +244,7 @@
         "short": "fr_CA",
         "name": "French (Canada)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 31
 },
 {
@@ -252,7 +252,7 @@
         "short": "fy_NL",
         "name": "Frisian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 32
 },
 {
@@ -260,7 +260,7 @@
         "short": "ga_IE",
         "name": "Irish"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 33
 },
 {
@@ -268,7 +268,7 @@
         "short": "gl_ES",
         "name": "Galician"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 34
 },
 {
@@ -276,7 +276,7 @@
         "short": "ko_KR",
         "name": "Korean"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 35
 },
 {
@@ -284,7 +284,7 @@
         "short": "hr_HR",
         "name": "Croatian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 36
 },
 {
@@ -292,7 +292,7 @@
         "short": "xh_ZA",
         "name": "Xhosa"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 37
 },
 {
@@ -300,7 +300,7 @@
         "short": "zu_ZA",
         "name": "Zulu"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 38
 },
 {
@@ -308,7 +308,7 @@
         "short": "is_IS",
         "name": "Icelandic"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 39
 },
 {
@@ -316,7 +316,7 @@
         "short": "it_IT",
         "name": "Italian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 40
 },
 {
@@ -324,7 +324,7 @@
         "short": "ka_GE",
         "name": "Georgian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 41
 },
 {
@@ -332,7 +332,7 @@
         "short": "sw_KE",
         "name": "Swahili"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 42
 },
 {
@@ -340,7 +340,7 @@
         "short": "tl_ST",
         "name": "Klingon"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 43
 },
 {
@@ -348,7 +348,7 @@
         "short": "ku_TR",
         "name": "Kurdish"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 44
 },
 {
@@ -356,7 +356,7 @@
         "short": "lv_LV",
         "name": "Latvian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 45
 },
 {
@@ -364,7 +364,7 @@
         "short": "fb_LT",
         "name": "Leet Speak"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 46
 },
 {
@@ -372,7 +372,7 @@
         "short": "lt_LT",
         "name": "Lithuanian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 47
 },
 {
@@ -380,7 +380,7 @@
         "short": "li_NL",
         "name": "Limburgish"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 48
 },
 {
@@ -388,7 +388,7 @@
         "short": "la_VA",
         "name": "Latin"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 49
 },
 {
@@ -396,7 +396,7 @@
         "short": "hu_HU",
         "name": "Hungarian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 50
 },
 {
@@ -404,7 +404,7 @@
         "short": "mg_MG",
         "name": "Malagasy"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 51
 },
 {
@@ -412,7 +412,7 @@
         "short": "mt_MT",
         "name": "Maltese"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 52
 },
 {
@@ -420,7 +420,7 @@
         "short": "nl_NL",
         "name": "Dutch"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 53
 },
 {
@@ -428,7 +428,7 @@
         "short": "nl_BE",
         "name": "Dutch (België)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 54
 },
 {
@@ -436,7 +436,7 @@
         "short": "ja_JP",
         "name": "Japanese"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 55
 },
 {
@@ -444,7 +444,7 @@
         "short": "nb_NO",
         "name": "Norwegian (bokmal)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 56
 },
 {
@@ -452,7 +452,7 @@
         "short": "nn_NO",
         "name": "Norwegian (nynorsk)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 57
 },
 {
@@ -460,7 +460,7 @@
         "short": "uz_UZ",
         "name": "Uzbek"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 58
 },
 {
@@ -468,7 +468,7 @@
         "short": "pl_PL",
         "name": "Polish"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 59
 },
 {
@@ -476,7 +476,7 @@
         "short": "pt_BR",
         "name": "Portuguese (Brazil)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 60
 },
 {
@@ -484,7 +484,7 @@
         "short": "pt_PT",
         "name": "Portuguese (Portugal)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 61
 },
 {
@@ -492,7 +492,7 @@
         "short": "qu_PE",
         "name": "Quechua"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 62
 },
 {
@@ -500,7 +500,7 @@
         "short": "ro_RO",
         "name": "Romanian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 63
 },
 {
@@ -508,7 +508,7 @@
         "short": "rm_CH",
         "name": "Romansh"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 64
 },
 {
@@ -516,7 +516,7 @@
         "short": "ru_RU",
         "name": "Russian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 65
 },
 {
@@ -524,7 +524,7 @@
         "short": "sq_AL",
         "name": "Albanian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 66
 },
 {
@@ -532,7 +532,7 @@
         "short": "sk_SK",
         "name": "Slovak"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 67
 },
 {
@@ -540,7 +540,7 @@
         "short": "sl_SI",
         "name": "Slovenian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 68
 },
 {
@@ -548,7 +548,7 @@
         "short": "so_SO",
         "name": "Somali"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 69
 },
 {
@@ -556,7 +556,7 @@
         "short": "fi_FI",
         "name": "Finnish"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 70
 },
 {
@@ -564,7 +564,7 @@
         "short": "sv_SE",
         "name": "Swedish"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 71
 },
 {
@@ -572,7 +572,7 @@
         "short": "th_TH",
         "name": "Thai"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 72
 },
 {
@@ -580,7 +580,7 @@
         "short": "vi_VN",
         "name": "Vietnamese"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 73
 },
 {
@@ -588,7 +588,7 @@
         "short": "tr_TR",
         "name": "Turkish"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 74
 },
 {
@@ -596,7 +596,7 @@
         "short": "zh_CN",
         "name": "Simplified Chinese (China)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 75
 },
 {
@@ -604,7 +604,7 @@
         "short": "zh_TW",
         "name": "Traditional Chinese (Taiwan)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 76
 },
 {
@@ -612,7 +612,7 @@
         "short": "zh_HK",
         "name": "Traditional Chinese (Hong Kong)"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 77
 },
 {
@@ -620,7 +620,7 @@
         "short": "el_GR",
         "name": "Greek"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 78
 },
 {
@@ -628,7 +628,7 @@
         "short": "gx_GR",
         "name": "Classical Greek"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 79
 },
 {
@@ -636,7 +636,7 @@
         "short": "be_BY",
         "name": "Belarusian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 80
 },
 {
@@ -644,7 +644,7 @@
         "short": "bg_BG",
         "name": "Bulgarian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 81
 },
 {
@@ -652,7 +652,7 @@
         "short": "kk_KZ",
         "name": "Kazakh"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 82
 },
 {
@@ -660,7 +660,7 @@
         "short": "mk_MK",
         "name": "Macedonian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 83
 },
 {
@@ -668,7 +668,7 @@
         "short": "mn_MN",
         "name": "Mongolian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 84
 },
 {
@@ -676,7 +676,7 @@
         "short": "sr_RS",
         "name": "Serbian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 85
 },
 {
@@ -684,7 +684,7 @@
         "short": "tt_RU",
         "name": "Tatar"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 86
 },
 {
@@ -692,7 +692,7 @@
         "short": "tg_TJ",
         "name": "Tajik"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 87
 },
 {
@@ -700,7 +700,7 @@
         "short": "uk_UA",
         "name": "Ukrainian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 88
 },
 {
@@ -708,7 +708,7 @@
         "short": "hy_AM",
         "name": "Armenian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 89
 },
 {
@@ -716,7 +716,7 @@
         "short": "yi_DE",
         "name": "Yiddish"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 90
 },
 {
@@ -724,7 +724,7 @@
         "short": "he_IL",
         "name": "Hebrew"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 91
 },
 {
@@ -732,7 +732,7 @@
         "short": "ur_PK",
         "name": "Urdu"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 92
 },
 {
@@ -740,7 +740,7 @@
         "short": "ar_AR",
         "name": "Arabic"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 93
 },
 {
@@ -748,7 +748,7 @@
         "short": "ps_AF",
         "name": "Pashto"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 94
 },
 {
@@ -756,7 +756,7 @@
         "short": "fa_IR",
         "name": "Persian"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 95
 },
 {
@@ -764,7 +764,7 @@
         "short": "sy_SY",
         "name": "Syriac"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 96
 },
 {
@@ -772,7 +772,7 @@
         "short": "ne_NP",
         "name": "Nepali"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 97
 },
 {
@@ -780,7 +780,7 @@
         "short": "mr_IN",
         "name": "Marathi"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 98
 },
 {
@@ -788,7 +788,7 @@
         "short": "sa_IN",
         "name": "Sanskrit"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 99
 },
 {
@@ -796,7 +796,7 @@
         "short": "hi_IN",
         "name": "Hindi"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 100
 },
 {
@@ -804,7 +804,7 @@
         "short": "bn_IN",
         "name": "Bengali"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 101
 },
 {
@@ -812,7 +812,7 @@
         "short": "pa_IN",
         "name": "Punjabi"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 102
 },
 {
@@ -820,7 +820,7 @@
         "short": "gu_IN",
         "name": "Gujarati"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 103
 },
 {
@@ -828,7 +828,7 @@
         "short": "ta_IN",
         "name": "Tamil"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 104
 },
 {
@@ -836,7 +836,7 @@
         "short": "te_IN",
         "name": "Telugu"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 105
 },
 {
@@ -844,7 +844,7 @@
         "short": "kn_IN",
         "name": "Kannada"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 106
 },
 {
@@ -852,7 +852,7 @@
         "short": "ml_IN",
         "name": "Malayalam"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 107
 },
 {
@@ -860,7 +860,7 @@
         "short": "km_KH",
         "name": "Khmer"
     },
-    "model": "realcontent.language",
+    "model": "real_content.language",
     "pk": 108
 }
 ]

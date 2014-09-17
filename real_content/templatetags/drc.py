@@ -2,13 +2,13 @@
 
 from django import template
 
-from realcontent.models import Language, Content
+from real_content.models import Language, Content
 
 register = template.Library()
 
 
-@register.inclusion_tag('realcontent/tags/realcontent_title.html')
-def realcontent_title(heading_level=1, css_class='', language=''):
+@register.inclusion_tag('real_content/tags/drc_title.html')
+def drc_title(heading_level=1, css_class='', language=''):
     u"""
     Retrieve random title.
     Uses langauge from global settings if an override is not provided.
@@ -31,8 +31,8 @@ def realcontent_title(heading_level=1, css_class='', language=''):
     return data
 
 
-@register.inclusion_tag('realcontent/tags/realcontent_paragraph.html')
-def realcontent_paragraphs(no_of_paraghaphs=1, css_class='', language=''):
+@register.inclusion_tag('real_content/tags/drc_paragraph.html')
+def drc_paragraphs(no_of_paraghaphs=1, css_class='', language=''):
     u"""
     Retrieve n random paragraphs.
     Uses langauge from global settings if an override is not provided.
@@ -51,8 +51,8 @@ def realcontent_paragraphs(no_of_paraghaphs=1, css_class='', language=''):
     return data
 
 
-@register.inclusion_tag('realcontent/tags/realcontent_lorempixel.html')
-def realcontent_image(width=640, height=480, category='',
+@register.inclusion_tag('real_content/tags/drc_lorempixel.html')
+def drc_image(width=640, height=480, category='',
     gray=False, image_id='', css_class=''):
     u"""
     Retrieve image from lorempixel.com service.

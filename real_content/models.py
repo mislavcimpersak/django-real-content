@@ -47,7 +47,7 @@ class Language(models.Model):
                 else:
                     languages = []
         else:
-            languages = Language.get_languages(settings.REALCONTENT_LANGUAGE)
+            languages = Language.get_languages(settings.DRC_LANGUAGE)
         if single:
             return languages[0]
         else:

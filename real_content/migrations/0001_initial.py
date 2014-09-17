@@ -39,7 +39,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='content',
             name='language',
-            field=models.ForeignKey(to='realcontent.Language'),
+            field=models.ForeignKey(to='real_content.Language'),
             preserve_default=True,
         ),
     ]
