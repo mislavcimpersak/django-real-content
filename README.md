@@ -24,7 +24,7 @@ Load django-real-content in your template.
 {% load drc %}
 ```
 
-##### random title
+#### random title
 show random title
 ```
 {% drc_title %}
@@ -42,7 +42,7 @@ show random title with additional css class
 {% drc_title css_class='custom_css_class' %}
 ```
 
-##### random paragraphs
+#### random paragraphs
 show 1 random paragraph
 ```
 {% drc_paragaphs %}
@@ -60,7 +60,7 @@ show 1 random paragraph with additional css class
 {% drc_paragaphs css_class='custom_css_class' %}
 ```
 
-##### random images
+#### random images
 show random image from lorempixel.com
 ```
 {% drc_image %}
