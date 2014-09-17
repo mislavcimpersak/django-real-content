@@ -88,3 +88,9 @@ Currently there are 20 titles and 100 paragraphs with variable lengths per langu
 
 - hr: http://hr.wikipedia.org
 - en: http://en.wikipedia.org
+
+## TODO
+- load fixtures in migration
+- tests
+- translations
+- add more languages
