@@ -2,8 +2,6 @@
 
 Template tags to quickly show real content instead of lorem ipsum.
 
-*** still broken  - don't use just yet ;) ***
-
 ## Instalation
 ```
 pip install -e git+https://github.com/mislavcimpersak/django-real-content#egg=django-real-content
