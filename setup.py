@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
     README = readme.read()
@@ -9,29 +9,43 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
 setup(
     name='django-real-content',
     version='0.1',
-    packages=['real_content'],
+    packages=find_packages(),
+    # packages=find_packages(exclude=("tests",)),
     include_package_data=True,
-    license='MIT License',
+    license='MIT',
     description='Template tags to quickly show real content instead of lorem ipsum.',
-    long_description=README,
+    long_description=read('README.md'),
     url='https://github.com/mislavcimpersak/django-real-content',
     author=u'Mislav Cimperšak',
     author_email='yourname@example.com',
+    keywords='django real content lorem ipsum',
+    install_requires=[
+        'Django>=1.7',
+        'beautifulsoup4>=4.3'
+    ],
+    # tests are on the roadmap
+    # tests_require=[
+    #     'Django>=1.7',
+    # ],
     classifiers=[
+        'Development Status :: 2 :: Pre-Alpha',
+        # 'Development Status :: 3 :: Alpha',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License', # example license
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        # Replace these appropriately if you are stuck on Python 2.
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
         'Topic :: Internet :: WWW/HTTP',
-        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+        'Topic :: Software Development :: Libraries :: Python Modules',
     ],
 )
