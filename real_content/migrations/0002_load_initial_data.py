@@ -12,6 +12,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        call_command("loaddata", "init_languages.json")
+        call_command("loaddata", "init_languages.json"),
         call_command("loaddata", "init_content.json")
     ]
