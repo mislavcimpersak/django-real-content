@@ -94,7 +94,9 @@ Currently there are ~20 titles and ~100 paragraphs with variable lengths per lan
 - en: http://en.wikipedia.org
 
 ## TODO
+- switch from having migrations to loading from file
+- refactor management command to more easily add new languages and to add lines to existing ones
+- add more languages (de...)
 - tests
-- translation strings
-- add more languages
-- pypi
+- submit to pypi
+- force lorem pixel tag shows different images (make it to show random numbered image)
