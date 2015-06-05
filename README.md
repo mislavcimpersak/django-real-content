@@ -1,6 +1,6 @@
 # django-real-content
 
-Template tags to quickly show real content instead of [lorem ipsum](http://www.smashingmagazine.com/2010/01/06/lorem-ipsum-killing-designs/). Useful to get a sense of real world content with fun local unicode characters.
+Template tags to quickly show real content instead of misleading [lorem ipsum](http://www.smashingmagazine.com/2010/01/06/lorem-ipsum-killing-designs/). Useful to get a sense of real world content with fun local unicode characters.
 
 ## Installation
 ```
