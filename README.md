@@ -92,6 +92,7 @@ Currently there are ~20 titles and ~100 paragraphs with variable lengths per lan
 - switch from having migrations to loading from file
     - ignore lines starting with `#
 - refactor management command to more easily add new languages and to add lines to existing ones
+    - some sort of unobtrusive crawling through several site urls, not just crawling given url
 - add more languages (de...)
 - tests
 - submit to pypi
