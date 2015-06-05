@@ -89,11 +89,8 @@ Currently there are ~20 titles and ~100 paragraphs with variable lengths per lan
 - en: http://en.wikipedia.org
 
 ## TODO
-- switch from having migrations to loading from file
-    - ignore lines starting with `#
 - refactor management command to more easily add new languages and to add lines to existing ones
     - some sort of unobtrusive crawling through several site urls, not just crawling given url
-- add more languages (de...)
+- add more languages in the package as standard (de, cz...)
 - tests
 - submit to pypi
-- force lorem pixel tag shows different images (make it to show random numbered image)
