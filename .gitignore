@@ -50,3 +50,7 @@ Desktop.ini
 /*.log
 
 *.sqlite3
+
+/demo
+/drc
+manage.py
