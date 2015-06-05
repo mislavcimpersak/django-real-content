@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import codecs
-import os
 import random
 
 from django import template
-from django.conf import settings
 
-# from real_content.models import Language, Content
+from real_content.drc_utils import get_language, get_text_file
 
 register = template.Library()
 
@@ -24,23 +21,6 @@ def random_lines(text_file, no_of_lines=1):
         return random.choice(clean_lines)
     else:
         return random.sample(clean_lines, no_of_lines)
-
-
-def get_language(language=''):
-    if language == '':
-        language = settings.DRC_LANGUAGE
-    language = language.strip()
-    return language
-
-
-def get_text_file(language, text_type='titles'):
-    content_dir = os.path.abspath(
-        os.path.join(os.path.dirname(__file__), os.pardir, 'content'))
-    content_file = os.path.join(
-        content_dir, '{}_{}.txt'.format(language, text_type))
-
-    titles = codecs.open(content_file, 'r', 'utf-8')
-    return titles
 
 
 @register.inclusion_tag('real_content/tags/drc_title.html')
