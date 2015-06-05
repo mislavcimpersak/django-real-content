@@ -86,6 +86,9 @@ def drc_image(width=640, height=480, category='',
     gray=False, image_id='', css_class=''):
     u"""
     Retrieve image from lorempixel.com service.
+    Possible categories are:
+        abstract, animals, business, cats, city, food, nightlife, fashion,
+        people, nature, sports, technics, transport
     """
     data = {}
     url = u'http://lorempixel.com/'
@@ -94,8 +97,16 @@ def drc_image(width=640, height=480, category='',
     url = '{url}{width}/{height}/'.format(url=url, width=width, height=height)
     if category:
         url = '{url}{category}/'.format(url=url, category=category)
-    if image_id:
-        url = '{url}{image_id}'.format(url=url, image_id=image_id)
+
+        # image_id can only be defined if the category was set, otherwise we
+        # get black image
+        if image_id:
+            url = '{url}{image_id}'.format(url=url, image_id=image_id)
+        else:
+            # use random image_id if non was set to prevent from displaying the
+            # same image over and over again
+            url = '{url}{image_id}'.format(
+                url=url, image_id=random.randrange(1, 11))
 
     data['url'] = url
     data['css_class'] = css_class
