@@ -17,11 +17,6 @@ INSTALLED_APPS = (
 DRC_LANGUAGE = 'hr'
 ```
 
-and run migrations
-```
-python manage.py migrate real_content
-```
-
 ## Usage:
 Load django-real-content in your template.
 ```
@@ -95,7 +90,7 @@ Currently there are ~20 titles and ~100 paragraphs with variable lengths per lan
 
 ## TODO
 - switch from having migrations to loading from file
-    - ignore lines starting with `#`
+    - ignore lines starting with `#
 - refactor management command to more easily add new languages and to add lines to existing ones
 - add more languages (de...)
 - tests
