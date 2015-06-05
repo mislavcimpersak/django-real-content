@@ -4,14 +4,14 @@ from optparse import make_option
 
 from django.core.management import BaseCommand
 
-from real_content.utils import parse_url
+from real_content.drc_utils import parse_url
 
 
 class Command(BaseCommand):
     help = u"""
         Collect titles and paragraphs from given url.
         If no language is provided, it will use the one given in settings.
-        
+
         Example:
         ./manage.py drc_addcontent -u http://www.24sata.hr/a-383985 -l hr
         """
