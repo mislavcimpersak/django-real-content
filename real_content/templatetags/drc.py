@@ -89,14 +89,13 @@ def drc_image(width=640, height=480, category='',
     """
     data = {}
     url = u'http://lorempixel.com/'
-    # TODO use .format()
     if gray:
-        url += 'g/'
-    url += str(width) + '/' + str(height) + '/'
+        url = '{url}g/'.format(url=url)
+    url = '{url}{width}/{height}/'.format(url=url, width=width, height=height)
     if category:
-        url += category + '/'
+        url = '{url}{category}/'.format(url=url, category=category)
     if image_id:
-        url += str(image_id)
+        url = '{url}{image_id}'.format(url=url, image_id=image_id)
 
     data['url'] = url
     data['css_class'] = css_class
