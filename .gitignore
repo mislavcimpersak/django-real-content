@@ -1,0 +1,52 @@
+*.py[cod]
+*.ipynb
+
+# project
+/media
+*/settings/secret.py
+*/settings/production.py
+/scripts/*
+
+# for local filebased email
+/email/*
+
+project.wsgi
+
+# Packages
+*.egg
+*.egg-info
+dist
+eggs
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# SublimeText project files
+*.sublime*
+
+# PyCharm project files
+.idea
+
+# Mac OS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+/*.bat
+
+# Folder config file
+Desktop.ini
+
+/*.log
+
+*.sqlite3
