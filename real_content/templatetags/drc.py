@@ -12,7 +12,7 @@ from django.conf import settings
 register = template.Library()
 
 
-def random_line(text_file):
+def random_lines(text_file, no_of_lines=1):
     u"""
     Gets a random line from a file ignoring lines starting with #.
     """
@@ -20,7 +20,27 @@ def random_line(text_file):
     clean_lines = [line for line in lines if line.startswith('#') is False]
     if clean_lines == []:
         return 'no usable lines in language file'
-    return random.choice(clean_lines)
+    if no_of_lines == 1:
+        return random.choice(clean_lines)
+    else:
+        return random.sample(clean_lines, no_of_lines)
+
+
+def get_language(language=''):
+    if language == '':
+        language = settings.DRC_LANGUAGE
+    language = language.strip()
+    return language
+
+
+def get_text_file(language, text_type='titles'):
+    content_dir = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), os.pardir, 'content'))
+    content_file = os.path.join(
+        content_dir, '{}_{}.txt'.format(language, text_type))
+
+    titles = codecs.open(content_file, 'r', 'utf-8')
+    return titles
 
 
 @register.inclusion_tag('real_content/tags/drc_title.html')
@@ -29,18 +49,11 @@ def drc_title(heading_level=1, css_class='', language=''):
     Retrieve random title.
     Uses langauge from global settings if an override is not provided.
     """
-    if language == '':
-        language = settings.DRC_LANGUAGE
-    language = language.strip()
-
-    content_dir = os.path.abspath(
-        os.path.join(os.path.dirname(__file__), os.pardir, 'content'))
-    content_file = os.path.join(content_dir, '{}_titles.txt'.format(language))
-
-    hr_titles = codecs.open(content_file, 'r', 'utf-8')
+    language = get_language(language)
+    titles = get_text_file(language, 'titles')
 
     data = {
-        'title': random_line(hr_titles),
+        'title': random_lines(titles, 1),
     }
 
     if heading_level > 6:
@@ -57,19 +70,15 @@ def drc_paragraphs(no_of_paraghaphs=1, css_class='', language=''):
     Retrieve n random paragraphs.
     Uses langauge from global settings if an override is not provided.
     """
-    return
-    # languages = Language.get_languages(language)
+    language = get_language(language)
+    paragraphs = get_text_file(language, 'paragraphs')
 
-    # data = {}
-    # content = Content.randoms.filter(
-    #         language__in=languages,
-    #         content_category=Content.CONTENT_CATEGORY.paragraph)\
-    #     .values_list('content', flat=True)[:no_of_paraghaphs]
-    # if content:
-    #     data['paragraphs'] = content
+    data = {
+        'paragraphs': random_lines(paragraphs, no_of_paraghaphs)
+    }
 
-    # data['css_class'] = css_class
-    # return data
+    data['css_class'] = css_class
+    return data
 
 
 @register.inclusion_tag('real_content/tags/drc_lorempixel.html')
