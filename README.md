@@ -17,6 +17,10 @@ INSTALLED_APPS = (
 DRC_LANGUAGE = 'hr'
 ```
 
+### Languages currently supported out of the box
+
+de, en, hr
+
 ## Usage:
 Load django-real-content in your template.
 ```
@@ -83,10 +87,7 @@ python manage.py drc_addcontent -u http://www.24sata.hr/a-383985 -l hr
 
 ## Content sources
 
-Currently there are ~20 titles and ~100 paragraphs with variable lengths per language. Initial content was taken from random Wikipedia articles (featured articles of the day / latest improved articles).
-
-- hr: http://hr.wikipedia.org
-- en: http://en.wikipedia.org
+Various localized news portals and local wikipedia in some cases.
 
 ## TODO
 - refactor management command to more easily add new languages and to add lines to existing ones
