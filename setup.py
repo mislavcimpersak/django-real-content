@@ -3,7 +3,7 @@
 import os
 from setuptools import setup, find_packages
 
-with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
+with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
 
 # allow setup.py to be run from any path
@@ -21,7 +21,7 @@ setup(
     include_package_data=True,
     license='MIT',
     description='Template tags to quickly show real content instead of lorem ipsum.',
-    long_description=read('README.md'),
+    long_description=README,
     url='https://github.com/mislavcimpersak/django-real-content',
     download_url='https://github.com/mislavcimpersak/django-real-content/tarball/0.1',
     author=u'Mislav Cimperšak',

@@ -1,8 +1,6 @@
 include LICENSE
-include README.md
-recursive-include real_content/fixtures *
+include README.rst
 recursive-include real_content/management *
-recursive-include real_content/migrations *
 recursive-include real_content/templates *
 recursive-include real_content/templatetags *
 recursive-include docs *
