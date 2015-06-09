@@ -7,12 +7,12 @@ import os
 import urllib2
 from bs4 import BeautifulSoup
 
-from django.conf import settings
+from real_content.settings import DRC_LANGUAGE
 
 
 def get_language(language=''):
     if language == '':
-        language = settings.DRC_LANGUAGE
+        language = DRC_LANGUAGE
     language = language.strip()
     return language
 
