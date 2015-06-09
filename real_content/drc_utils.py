@@ -11,6 +11,9 @@ from real_content.settings import DRC_LANGUAGE
 
 
 def get_language(language=''):
+    u"""
+    Gets language from settings if it wasn't explicitly provided.
+    """
     if language == '' or language is None:
         language = DRC_LANGUAGE
     language = language.lower().strip()
@@ -18,6 +21,10 @@ def get_language(language=''):
 
 
 def get_text_file(language, text_type='titles', file_open_mode='r'):
+    u"""
+    Gets text file for specific language.
+    Used for reading and writing to a file.
+    """
     content_dir = os.path.abspath(
         os.path.join(os.path.dirname(__file__), 'content'))
     content_file_path = os.path.join(

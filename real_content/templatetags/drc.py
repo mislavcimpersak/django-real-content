@@ -13,6 +13,8 @@ def random_lines(text_file, no_of_lines=1):
     u"""
     Gets a random line from a file ignoring lines starting with #.
     """
+    if text_file is None:
+        return 'language file does not exists'
     lines = text_file.read().splitlines()
     clean_lines = [line for line in lines if
         line.startswith('#') is False or line.strip() == '']
