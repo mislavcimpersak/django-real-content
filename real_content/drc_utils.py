@@ -46,8 +46,7 @@ def save_content(content, tag, text_type='paragraphs', url='', language='',
 
     for tag in content.find_all(tag):
         new_content = ' '.join(
-                [part.strip() for part in tag.getText().split('\n')]
-            ).strip()
+            [part.strip() for part in tag.getText().split('\n')]).strip()
 
         if len(new_content) > min_length:
             new_data.append(new_content)
