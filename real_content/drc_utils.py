@@ -11,9 +11,9 @@ from real_content.settings import DRC_LANGUAGE
 
 
 def get_language(language=''):
-    if language == '':
+    if language == '' or language is None:
         language = DRC_LANGUAGE
-    language = language.strip()
+    language = language.lower().strip()
     return language
 
 
@@ -57,6 +57,7 @@ def save_content(content, tag, text_type='paragraphs', url='', language='',
     with get_text_file(language, text_type, 'a') as text_file:
         for new_content in new_data:
             text_file.write(u'{}\n'.format(new_content))
+        text_file.write(u'\n')
 
 
 def parse_url(url, language=''):
