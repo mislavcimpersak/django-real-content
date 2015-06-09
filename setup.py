@@ -36,7 +36,7 @@ setup(
     #     'Django>=1.7',
     # ],
     classifiers=[
-        'Development Status :: 3 :: Alpha',
+        'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
