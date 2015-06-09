@@ -19,7 +19,7 @@ DRC_LANGUAGE = 'hr'
 
 ### Languages currently supported out of the box
 
-de, en, hr
+de, en, hr, si
 
 ## Usage:
 Load django-real-content in your template.
