@@ -50,6 +50,7 @@ Desktop.ini
 /*.log
 
 *.sqlite3
+.pypirc
 
 /demo
 /drc
