@@ -23,6 +23,7 @@ setup(
     description='Template tags to quickly show real content instead of lorem ipsum.',
     long_description=read('README.md'),
     url='https://github.com/mislavcimpersak/django-real-content',
+    download_url='https://github.com/mislavcimpersak/django-real-content/tarball/0.1',
     author=u'Mislav Cimperšak',
     author_email='mislav.cimpersak@gmail.com',
     keywords='django real content lorem ipsum',
