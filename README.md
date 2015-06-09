@@ -8,11 +8,12 @@ pip install -e git+https://github.com/mislavcimpersak/django-real-content#egg=dj
 ```
 
 Add "real_content" to your INSTALLED_APPS setting and `DRC_LANGUAGE` setting (if none is set, english will be used).
+
 ```
 INSTALLED_APPS = (
-        ...
-        'real_content',
-    )
+    ...
+    'real_content',
+)
 
 DRC_LANGUAGE = 'hr'
 ```
