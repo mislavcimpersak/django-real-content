@@ -45,8 +45,20 @@ def save_content(content, tag, text_type='paragraphs', url='', language='',
         if len(new_content) > min_length:
             new_data.append(new_content)
 
-    # getting rid of duplicates
+    # getting rid of duplicates in new data
     new_data = list(set(new_data))
+
+    # remove previously existing items from new data
+    existing_file = get_text_file(language, text_type, 'r')
+    if existing_file:
+        existing_data = existing_file.read().splitlines()
+    else:
+        existing_data = []
+
+    new_data_copy = new_data[:]
+    for text in new_data_copy:
+        if text in existing_data:
+            new_data.remove(text)
 
     # put date and source as comments at the beginning of new data
     if len(new_data) > 0:
