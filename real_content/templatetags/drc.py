@@ -16,8 +16,8 @@ def random_lines(text_file, no_of_lines=1):
     if text_file is None:
         return 'language file does not exists'
     lines = text_file.read().splitlines()
-    clean_lines = [line for line in lines if
-        line.startswith('#') is False or line.strip() == '']
+    clean_lines = [line for line in lines
+        if line.startswith('#') is False or line.strip() == '']
 
     if clean_lines == []:
         return 'no usable lines in language file'
@@ -90,7 +90,8 @@ def drc_image(width=640, height=480, category='',
             # use random image_id if non was set to prevent from displaying the
             # same image over and over again
             url = '{url}{image_id}'.format(
-                url=url, image_id=random.randrange(1, 11))
+                url=url,
+                image_id=random.randrange(1, 11))
 
     data['url'] = url
     data['css_class'] = css_class
