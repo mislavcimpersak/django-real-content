@@ -90,8 +90,6 @@ python manage.py drc_addcontent -u http://www.24sata.hr/a-383985 -l hr
 Various localized news portals and local wikipedia in some cases.
 
 ## TODO
-- refactor management command to more easily add new languages and to add lines to existing ones
-    - some sort of unobtrusive crawling through several site urls, not just crawling given url
-- add more languages in the package as standard (de, cz...)
+- add more languages in the package as standard (cz, fr, nl...)
 - tests
 - submit to pypi

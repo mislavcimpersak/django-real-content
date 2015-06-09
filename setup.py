@@ -9,12 +9,13 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
+
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
     name='django-real-content',
-    version='0.1',
+    version='0.1.0',
     packages=find_packages(),
     # packages=find_packages(exclude=("tests",)),
     include_package_data=True,
@@ -23,7 +24,7 @@ setup(
     long_description=read('README.md'),
     url='https://github.com/mislavcimpersak/django-real-content',
     author=u'Mislav Cimperšak',
-    author_email='yourname@example.com',
+    author_email='mislav.cimpersak@gmail.com',
     keywords='django real content lorem ipsum',
     install_requires=[
         'Django>=1.7',
