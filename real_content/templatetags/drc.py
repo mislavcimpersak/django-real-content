@@ -14,7 +14,9 @@ def random_lines(text_file, no_of_lines=1):
     Gets a random line from a file ignoring lines starting with #.
     """
     lines = text_file.read().splitlines()
-    clean_lines = [line for line in lines if line.startswith('#') is False]
+    clean_lines = [line for line in lines if
+        line.startswith('#') is False or line.strip() == '']
+
     if clean_lines == []:
         return 'no usable lines in language file'
     if no_of_lines == 1:
