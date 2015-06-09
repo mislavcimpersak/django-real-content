@@ -44,19 +44,19 @@ show random title with additional css class
 #### random paragraphs
 show 1 random paragraph
 ```
-{% drc_paragaphs %}
+{% drc_paragraphs %}
 ```
 show 3 random paragraphs
 ```
-{% drc_paragaphs 3 %}
+{% drc_paragraphs 3 %}
 ```
 show 3 random paragraphs with additional css class
 ```
-{% drc_paragaphs 3 'custom_css_class' %}
+{% drc_paragraphs 3 'custom_css_class' %}
 ```
 show 1 random paragraph with additional css class
 ```
-{% drc_paragaphs css_class='custom_css_class' %}
+{% drc_paragraphs css_class='custom_css_class' %}
 ```
 
 #### random images
