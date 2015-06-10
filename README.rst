@@ -12,7 +12,7 @@ Installation
 
 ::
 
-    pip install -e git+https://github.com/mislavcimpersak/django-real-content#egg=django-real-content
+    pip install django-real-content
 
 Add "real\_content" to your INSTALLED\_APPS setting and ``DRC_LANGUAGE``
 setting (if none is set, english will be used).
