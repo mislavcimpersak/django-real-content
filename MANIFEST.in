@@ -5,3 +5,11 @@ recursive-include real_content/management *
 recursive-include real_content/templates *
 recursive-include real_content/templatetags *
 recursive-include docs *
+
+# exclude all bytecode
+global-exclude *.pyo
+global-exclude *.pyc
+
+# exclude dev stuff
+recursive-exclude demo *
+recursive-exclude drc *
