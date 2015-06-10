@@ -29,7 +29,7 @@ setting (if none is set, english will be used).
 Languages currently supported out of the box
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- de, en, hr, nl, si
+- de, en, fr, hr, nl, si
 
 Usage:
 ------
