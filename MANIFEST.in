@@ -1,5 +1,6 @@
 include LICENSE
 include README.rst
+recursive-include real_content/content *
 recursive-include real_content/management *
 recursive-include real_content/templates *
 recursive-include real_content/templatetags *
