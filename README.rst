@@ -1,3 +1,4 @@
+===================
 django-real-content
 ===================
 
@@ -40,7 +41,7 @@ Load django-real-content in your template.
     {% load drc %}
 
 random title
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 show random title
 
@@ -67,7 +68,7 @@ show random title with additional css class
     {% drc_title css_class='custom_css_class' %}
 
 random paragraphs
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 show 1 random paragraph
 
@@ -94,7 +95,7 @@ show 1 random paragraph with additional css class
     {% drc_paragraphs css_class='custom_css_class' %}
 
 random images
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 
 show random image from lorempixel.com
 
@@ -129,7 +130,7 @@ one given in settings.
 Content sources
 ---------------
 
-Various localized news portals and local wikipedia in some cases.
+Various localised news portals and local wikipedia in some cases.
 
 TODO
 ----
