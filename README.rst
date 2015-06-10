@@ -97,7 +97,7 @@ show 1 random paragraph with additional css class
 random images
 ~~~~~~~~~~~~~
 
-show random image from lorempixel.com
+show random image from `lorempixel.com <http://lorempixel.com>`_
 
 ::
 
