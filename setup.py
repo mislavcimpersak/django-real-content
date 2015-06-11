@@ -15,7 +15,7 @@ def read(fname):
 
 setup(
     name='django-real-content',
-    version='0.1.2',
+    version='0.1.3',
     packages=find_packages(),
     # packages=find_packages(exclude=("tests",)),
     include_package_data=True,
@@ -44,8 +44,6 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.2',
-        'Programming Language :: Python :: 3.3',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
