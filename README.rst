@@ -29,7 +29,7 @@ setting (if none is set, english will be used).
 Languages currently supported out of the box
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- de, en, es, fr, hr, nl, ru, si
+- de, en, es, fr, hr, it, nl, ru, si
 
 Usage:
 ------
@@ -135,6 +135,6 @@ Various localised news portals and local wikipedia in some cases.
 TODO
 ----
 
--  add more languages in the package as standard (cz, fi, gr, it, pl, pt, rs...)
+-  add more languages in the package as standard (cz, fi, gr, pl, pt, rs...)
 -  tests
 -  submit to pypi
