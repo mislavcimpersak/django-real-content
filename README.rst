@@ -135,6 +135,6 @@ Various localised news portals and local wikipedia in some cases.
 TODO
 ----
 
--  add more languages in the package as standard (cz, es, fi, gr, it, pl, pt, ru, rs...)
+-  add more languages in the package as standard (cz, fi, gr, it, pl, pt, ru, rs...)
 -  tests
 -  submit to pypi
