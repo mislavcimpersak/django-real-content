@@ -5,22 +5,24 @@ import random
 from django import template
 
 from real_content.drc_utils import get_language, get_text_file
+from real_content.settings import DRC_MISSING_FILE_MSG, DRC_EMPTY_FILE_MSG
 
 register = template.Library()
 
 
 def random_lines(text_file, no_of_lines=1):
     u"""
-    Gets a random line from a file ignoring lines starting with #.
+    Gets a random line from a file ignoring lines starting with # and empty
+    lines.
     """
     if text_file is None:
-        return 'language file does not exists'
+        return DRC_MISSING_FILE_MSG
     lines = text_file.read().splitlines()
     clean_lines = [line for line in lines
         if line.startswith('#') is False or line.strip() == '']
 
     if clean_lines == []:
-        return 'no usable lines in language file'
+        return DRC_EMPTY_FILE_MSG
     if no_of_lines == 1:
         return random.choice(clean_lines)
     else:
