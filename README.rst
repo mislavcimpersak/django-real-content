@@ -7,6 +7,10 @@ ipsum <http://www.smashingmagazine.com/2010/01/06/lorem-ipsum-killing-designs/>`
 Useful to get a sense of real world content with fun local unicode
 characters.
 
+Documentation
+-------------
+`Read the Docs <http://django-real-content.readthedocs.org/>`__
+
 Installation
 ------------
 
