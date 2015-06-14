@@ -14,13 +14,12 @@ Installation
 
     pip install django-real-content
 
-Add "real\_content" to your INSTALLED\_APPS setting and ``DRC_LANGUAGE``
-setting (if none is set, english will be used).
+In your project's settings file add ``real_content`` to your INSTALLED\_APPS setting and ``DRC_LANGUAGE`` setting (if none is set, english will be used).
 
 ::
 
     INSTALLED_APPS = (
-        ...
+        # ...
         'real_content',
     )
 
@@ -34,6 +33,8 @@ Languages currently supported out of the box
 Usage:
 ------
 
+Explaind in more detail on `read the docs <http://django-real-content.readthedocs.org/>`__.
+
 Load django-real-content in your template.
 
 ::
@@ -43,38 +44,15 @@ Load django-real-content in your template.
 random title
 ~~~~~~~~~~~~
 
-show random title
-
-::
-
-    {% drc_title %}
-
-show random title using ``h3`` html tag
+show random h3 title
 
 ::
 
     {% drc_title 3 %}
 
-show random title using ``h3`` html tag and with additional css class
-
-::
-
-    {% drc_title 3 'custom_css_class' %}
-
-show random title with additional css class
-
-::
-
-    {% drc_title css_class='custom_css_class' %}
 
 random paragraphs
 ~~~~~~~~~~~~~~~~~
-
-show 1 random paragraph
-
-::
-
-    {% drc_paragraphs %}
 
 show 3 random paragraphs
 
@@ -82,39 +60,15 @@ show 3 random paragraphs
 
     {% drc_paragraphs 3 %}
 
-show 3 random paragraphs with additional css class
 
-::
-
-    {% drc_paragraphs 3 'custom_css_class' %}
-
-show 1 random paragraph with additional css class
-
-::
-
-    {% drc_paragraphs css_class='custom_css_class' %}
-
-random images
+random image
 ~~~~~~~~~~~~~
-
-show random image from `lorempixel.com <http://lorempixel.com>`_
-
-::
-
-    {% drc_image %}
 
 show random image from lorempixel.com which dimensions are 420x360
 
 ::
 
     {% drc_image 420 360 %}
-
-show random image from lorempixel.com which dimensions are 420x360 in
-category "cats" and grayscale
-
-::
-
-    {% drc_image 420 360 category='sports' gray=True %}
 
 Need more content?
 ------------------
@@ -136,5 +90,3 @@ TODO
 ----
 
 -  add more languages in the package as standard (fi, gr, pl, pt, rs...)
--  tests
--  submit to pypi
