@@ -86,7 +86,7 @@ def drc_image(width=640, height=480, category='',
 
         # image_id can only be defined if the category was set, otherwise we
         # get black image
-        if image_id:
+        if image_id and image_id <= 10:
             url = '{url}{image_id}'.format(url=url, image_id=image_id)
         else:
             # use random image_id if non was set to prevent from displaying the
