@@ -34,6 +34,12 @@ show random title using ``h3`` html tag and with additional css class
 
     {% drc_title 3 css_class='custom_css_class' %}
 
+show random title using ``h3`` html tag with additional css class and language explicitly set (if you don't set language explicitly, tag will use language setting from your django project's settings)
+
+::
+
+    {% drc_title 3 css_class='custom_css_class' language='si' %}
+
 
 random paragraphs
 -----------------
@@ -61,6 +67,12 @@ show 3 random paragraphs with additional css class
 ::
 
     {% drc_paragraphs 3 css_class='custom_css_class' %}
+
+show 3 random paragraphs with additional css class and language explicitly set (if you don't set language explicitly, tag will use language setting from your django project's settings)
+
+::
+
+    {% drc_paragraphs 3 css_class='custom_css_class' language='si' %}
 
 
 random image
