@@ -5,7 +5,12 @@ import random
 from django import template
 
 from real_content.drc_utils import get_language, get_text_file
-from real_content.settings import DRC_MISSING_FILE_MSG, DRC_EMPTY_FILE_MSG
+from real_content.settings import (
+    DRC_MISSING_FILE_MSG,
+    DRC_EMPTY_FILE_MSG,
+    DRC_NUMBER_START,
+    DRC_NUMBER_END
+    )
 
 register = template.Library()
 
@@ -98,3 +103,18 @@ def drc_image(width=640, height=480, category='',
     data['url'] = url
     data['css_class'] = css_class
     return data
+
+
+@register.simple_tag
+def drc_number(start=DRC_NUMBER_START, end=DRC_NUMBER_END):
+    u"""
+    Return a random number inbetween start and end limits.
+    """
+    try:
+        int(start), int(end)
+        if start <= end:
+            return random.randint(int(start), int(end))
+        else:
+            return num(end, start)
+    except ValueError:
+        return 'please provide a number as an argument'

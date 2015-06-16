@@ -53,3 +53,12 @@ class ImageTagTest(TestCase):
         img_source = img_tag.attrs.get('src')
         self.assertTrue('300/200' in img_source, 'wrong image dimensions')
         self.assertTrue('300/200/sport' in img_source, 'wrong image category')
+
+
+class NumberTagTest(TestCase):
+    TEMPLATE = Template('{% load drc %} {% drc_number 1 100 %}')
+
+    def test_number_shows_up(self):
+        rendered = self.TEMPLATE.render(Context({}))
+        number = int(rendered)
+        self.assertTrue(1 < number < 100, 'number out of bounds')

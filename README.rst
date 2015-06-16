@@ -74,6 +74,17 @@ show random image from lorempixel.com which dimensions are 420x360
 
     {% drc_image 420 360 %}
 
+
+random number
+~~~~~~~~~~~~~
+
+show a random number between 1 and 100
+
+::
+
+    {% drc_number 1 100 %}
+
+
 Need more content?
 ------------------
 

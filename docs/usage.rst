@@ -103,3 +103,19 @@ category "cats", grayscale and with additional css class
 ::
 
     {% drc_image 420 360 category='sports' gray=True css_class='custom_css_class' %}
+
+
+random number
+-----------------
+
+show a random number (it's minimum and maximum values are set in DRC_NUMBER_START and DRC_NUMBER_END settings)
+
+::
+
+    {% drc_number %}
+
+show a random number between 1 and 100
+
+::
+
+    {% drc_number 1 100 %}
