@@ -115,6 +115,6 @@ def drc_number(start=DRC_NUMBER_START, end=DRC_NUMBER_END):
         if start <= end:
             return random.randint(int(start), int(end))
         else:
-            return num(end, start)
+            return drc_number(end, start)
     except ValueError:
         return 'please provide a number as an argument'
