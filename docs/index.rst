@@ -47,4 +47,4 @@ In your project's settings file add ``real_content`` to your INSTALLED\_APPS set
 Languages currently supported out of the box
 --------------------------------------------
 
-- cz, de, en, es, fr, gr, hr, it, nl, pl, ru, si
+- cz, de, en, es, fr, gr, hr, it, nl, pl, rs, ru, si
