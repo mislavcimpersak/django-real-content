@@ -35,7 +35,7 @@ def random_lines(text_file, no_of_lines=1):
 
 
 @register.inclusion_tag('real_content/tags/drc_title.html')
-def drc_title(heading_level=1, css_class='', language=''):
+def drc_title(tag='h1', css_class='', language=''):
     u"""
     Retrieve random title.
     Uses langauge from global settings if an override is not provided.
@@ -47,10 +47,21 @@ def drc_title(heading_level=1, css_class='', language=''):
         'title': random_lines(titles, 1),
     }
 
-    if heading_level > 6:
-        data['heading_level'] = 6
-    else:
-        data['heading_level'] = heading_level
+    # backwards compatibility with 0.1.5 - if only heading size was sent
+    try:
+        tag = int(tag)
+        if tag > 6:
+            tag = 6
+        tag = 'h{}'.format(tag)
+    except ValueError:
+        pass
+
+    # make sure that only one word is the tag (important for closing tags)
+    try:
+        data['tag'] = tag.split()[0]
+    except IndexError:
+        data['tag'] = 'h1'
+
     data['css_class'] = css_class
     return data
 

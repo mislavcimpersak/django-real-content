@@ -48,11 +48,11 @@ Load django-real-content in your template.
 random title
 ~~~~~~~~~~~~
 
-show random h3 title
+show random title with h3 tag
 
 ::
 
-    {% drc_title 3 %}
+    {% drc_title 'h3' %}
 
 
 random paragraphs

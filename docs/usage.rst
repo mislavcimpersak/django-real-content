@@ -20,25 +20,20 @@ show random title using ``h3`` html tag
 
 ::
 
-    {% drc_title 3 %}
+    {% drc_title 'h3' %}
 
-show random title with additional css class
 
-::
-
-    {% drc_title css_class='custom_css_class' %}
-
-show random title using ``h3`` html tag and with additional css class
+show random title using ``span`` html tag and with additional css class
 
 ::
 
-    {% drc_title 3 css_class='custom_css_class' %}
+    {% drc_title 'span' css_class='custom_css_class' %}
 
 show random title using ``h3`` html tag with additional css class and language explicitly set (if you don't set language explicitly, tag will use language setting from your django project's settings)
 
 ::
 
-    {% drc_title 3 css_class='custom_css_class' language='si' %}
+    {% drc_title 'h3' css_class='custom_css_class' language='si' %}
 
 
 random paragraphs
