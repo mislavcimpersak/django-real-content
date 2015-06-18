@@ -85,17 +85,6 @@ show a random number between 1 and 100
     {% drc_number 1 100 %}
 
 
-Need more content?
-------------------
-
-Use management command ``drc_addcontent`` to collect titles and
-paragraphs from given url. If no language is provided, it will use the
-one given in settings.
-
-::
-
-    python manage.py drc_addcontent -u http://www.24sata.hr/a-383985 -l hr
-
 Content sources
 ---------------
 
