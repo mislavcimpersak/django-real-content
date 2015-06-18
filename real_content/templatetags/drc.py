@@ -56,7 +56,7 @@ def drc_title(heading_level=1, css_class='', language=''):
 
 
 @register.inclusion_tag('real_content/tags/drc_paragraph.html')
-def drc_paragraphs(no_of_paraghaphs=1, css_class='', language=''):
+def drc_paragraphs(no_of_paragraphs=1, css_class='', language=''):
     u"""
     Retrieve n random paragraphs.
     Uses langauge from global settings if an override is not provided.
@@ -64,8 +64,16 @@ def drc_paragraphs(no_of_paraghaphs=1, css_class='', language=''):
     language = get_language(language)
     paragraphs = get_text_file(language, 'paragraphs')
 
+    random_paragraphs = random_lines(paragraphs, no_of_paragraphs)
+
+    # fix when returning only 1 paragraph
+    if isinstance(random_paragraphs, basestring):
+        temp_list = []
+        temp_list.append(random_paragraphs)
+        random_paragraphs = temp_list
+
     data = {
-        'paragraphs': random_lines(paragraphs, no_of_paraghaphs)
+        'paragraphs': random_paragraphs,
     }
 
     data['css_class'] = css_class
