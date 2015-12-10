@@ -13,4 +13,4 @@ install:
   - python setup.py -q install
 
 script:
-  - py.test .
+  - tox
