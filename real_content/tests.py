@@ -23,6 +23,22 @@ class TitleTagTest(TestCase):
             'language file empty')
         self.assertFalse(h2_tag.is_empty_element, 'title tag is empty')
 
+    def test_title_multiple_words_in_param(self):
+        template = Template('{% load drc %} {% drc_title "h3 data-arg" %}')
+        rendered = template.render(Context({}))
+        soup = BeautifulSoup(rendered, 'html.parser')
+        h3_tag = soup.find('h3')
+
+        self.assertFalse(h3_tag.has_attr('data-arg'))
+
+    def test_title_empty_param(self):
+        template = Template('{% load drc %} {% drc_title "" %}')
+        rendered = template.render(Context({}))
+        soup = BeautifulSoup(rendered, 'html.parser')
+        h1_tag = soup.find('h1')
+
+        self.assertTrue(h1_tag, 'title tag missing')
+
 
 class ParagraphsTagTest(TestCase):
     TEMPLATE = Template('{% load drc %} {% drc_paragraphs 2 %}')

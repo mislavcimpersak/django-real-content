@@ -57,7 +57,8 @@ def drc_title(tag='h1', css_class='', language=''):
     except ValueError:
         pass
 
-    # make sure that only one word is the tag (important for closing tags)
+    # make sure that only/at least one word is the tag
+    # (important for closing tags)
     try:
         data['tag'] = tag.split()[0]
     except IndexError:
