@@ -11,3 +11,6 @@ install:
   - pip install -q Django==$DJANGO_VERSION
   - pip install beautifulsoup4
   - python setup.py -q install
+
+script:
+  - py.test .
