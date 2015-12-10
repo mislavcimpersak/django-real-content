@@ -61,4 +61,4 @@ class NumberTagTest(TestCase):
     def test_number_shows_up(self):
         rendered = self.TEMPLATE.render(Context({}))
         number = int(rendered)
-        self.assertTrue(1 < number < 100, 'number out of bounds')
+        self.assertTrue(1 < number <= 100, 'number out of bounds')
