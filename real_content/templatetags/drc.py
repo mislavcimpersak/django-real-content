@@ -3,6 +3,7 @@
 import random
 
 from django import template
+from django.utils import six
 
 from real_content.drc_utils import get_language, get_text_file
 from real_content.settings import (
@@ -78,7 +79,7 @@ def drc_paragraphs(no_of_paragraphs=1, css_class='', language=''):
     random_paragraphs = random_lines(paragraphs, no_of_paragraphs)
 
     # fix when returning only 1 paragraph
-    if isinstance(random_paragraphs, basestring):
+    if isinstance(random_paragraphs, six.string_types):
         temp_list = []
         temp_list.append(random_paragraphs)
         random_paragraphs = temp_list

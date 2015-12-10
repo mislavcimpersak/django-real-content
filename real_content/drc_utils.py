@@ -4,7 +4,10 @@ import codecs
 from datetime import datetime
 import os
 
-import urllib2
+try:
+    from urllib.request import urlopen, HTTPError  # py3
+except ImportError:
+    from urllib2 import urlopen, HTTPError  # py2
 from bs4 import BeautifulSoup
 
 from real_content.settings import DRC_LANGUAGE
@@ -84,7 +87,7 @@ def parse_url(url, language=''):
     """
     language = get_language(language)
     try:
-        soup = BeautifulSoup(urllib2.urlopen(url).read())
+        soup = BeautifulSoup(urlopen(url).read())
 
         # saving paragraphs
         save_content(soup, 'p', 'paragraphs', url=url, language=language,
@@ -97,5 +100,5 @@ def parse_url(url, language=''):
                 language=language, min_length=20)
         return 'success!'
 
-    except urllib2.HTTPError:
+    except HTTPError:
         return '403 error'
