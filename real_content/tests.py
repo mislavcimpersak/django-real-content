@@ -13,7 +13,7 @@ class TitleTagTest(TestCase):
 
     def test_title_shows_up(self):
         rendered = self.TEMPLATE.render(Context({}))
-        soup = BeautifulSoup(rendered)
+        soup = BeautifulSoup(rendered, 'html.parser')
         h2_tag = soup.find('h2')
 
         self.assertTrue(h2_tag, 'title tag missing')
@@ -29,7 +29,7 @@ class ParagraphsTagTest(TestCase):
 
     def test_paragraphs_show_up(self):
         rendered = self.TEMPLATE.render(Context({}))
-        soup = BeautifulSoup(rendered)
+        soup = BeautifulSoup(rendered, 'html.parser')
         p_tags = soup.find_all('p')
 
         self.assertTrue(p_tags, 'paragraph tags missing')
@@ -46,7 +46,7 @@ class ImageTagTest(TestCase):
 
     def test_image_shows_up(self):
         rendered = self.TEMPLATE.render(Context({}))
-        soup = BeautifulSoup(rendered)
+        soup = BeautifulSoup(rendered, 'html.parser')
         img_tag = soup.find('img')
 
         self.assertTrue(img_tag, 'image tag missing')
