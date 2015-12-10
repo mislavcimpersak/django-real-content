@@ -9,10 +9,9 @@ from real_content.settings import DRC_MISSING_FILE_MSG, DRC_EMPTY_FILE_MSG
 
 
 class TitleTagTest(TestCase):
-    TEMPLATE = Template('{% load drc %} {% drc_title 2 %}')
-
     def test_title_shows_up(self):
-        rendered = self.TEMPLATE.render(Context({}))
+        template = Template('{% load drc %} {% drc_title 2 %}')
+        rendered = template.render(Context({}))
         soup = BeautifulSoup(rendered, 'html.parser')
         h2_tag = soup.find('h2')
 
@@ -49,10 +48,10 @@ class TitleTagTest(TestCase):
 
 
 class ParagraphsTagTest(TestCase):
-    TEMPLATE = Template('{% load drc %} {% drc_paragraphs 2 %}')
 
     def test_paragraphs_show_up(self):
-        rendered = self.TEMPLATE.render(Context({}))
+        template = Template('{% load drc %} {% drc_paragraphs 2 %}')
+        rendered = template.render(Context({}))
         soup = BeautifulSoup(rendered, 'html.parser')
         p_tags = soup.find_all('p')
 
@@ -75,10 +74,9 @@ class ParagraphsTagTest(TestCase):
 
 
 class ImageTagTest(TestCase):
-    TEMPLATE = Template('{% load drc %} {% drc_image 300 200 "sport" %}')
-
     def test_image_shows_up(self):
-        rendered = self.TEMPLATE.render(Context({}))
+        template = Template('{% load drc %} {% drc_image 300 200 "sport" %}')
+        rendered = template.render(Context({}))
         soup = BeautifulSoup(rendered, 'html.parser')
         img_tag = soup.find('img')
 
@@ -86,6 +84,15 @@ class ImageTagTest(TestCase):
         img_source = img_tag.attrs.get('src')
         self.assertTrue('300/200' in img_source, 'wrong image dimensions')
         self.assertTrue('300/200/sport' in img_source, 'wrong image category')
+
+    def test_image_gray(self):
+        template = Template('{% load drc %} {% drc_image 300 200 gray=True %}')
+        rendered = template.render(Context({}))
+        soup = BeautifulSoup(rendered, 'html.parser')
+        img_tag = soup.find('img')
+
+        img_source = img_tag.attrs.get('src')
+        self.assertTrue('/g/' in img_source, 'image not in grayscale')
 
 
 class NumberTagTest(TestCase):
