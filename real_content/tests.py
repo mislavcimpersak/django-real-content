@@ -94,6 +94,16 @@ class ImageTagTest(TestCase):
         img_source = img_tag.attrs.get('src')
         self.assertTrue('/g/' in img_source, 'image not in grayscale')
 
+    def test_image_specific_id(self):
+        template = Template(
+            '{% load drc %} {% drc_image category="people" image_id=2 %}')
+        rendered = template.render(Context({}))
+        soup = BeautifulSoup(rendered, 'html.parser')
+        img_tag = soup.find('img')
+
+        img_source = img_tag.attrs.get('src')
+        self.assertTrue('/people/2' in img_source, 'specific image id not set')
+
 
 class NumberTagTest(TestCase):
     TEMPLATE = Template('{% load drc %} {% drc_number 1 100 %}')
