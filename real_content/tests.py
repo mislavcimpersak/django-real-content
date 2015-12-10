@@ -64,6 +64,15 @@ class ParagraphsTagTest(TestCase):
             'language file empty')
         self.assertFalse(p_tags[0].is_empty_element, 'paragraph tag is empty')
 
+    def test_paragraphs_only_one_p(self):
+        template = Template('{% load drc %} {% drc_paragraphs 1 %}')
+        rendered = template.render(Context({}))
+        soup = BeautifulSoup(rendered, 'html.parser')
+        p_tags = soup.find_all('p')
+
+        self.assertTrue(p_tags, 'paragraph tags missing')
+        self.assertTrue(len(p_tags) == 1, 'not enough paragraphs')
+
 
 class ImageTagTest(TestCase):
     TEMPLATE = Template('{% load drc %} {% drc_image 300 200 "sport" %}')
