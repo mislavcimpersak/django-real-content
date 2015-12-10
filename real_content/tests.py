@@ -39,6 +39,14 @@ class TitleTagTest(TestCase):
 
         self.assertTrue(h1_tag, 'title tag missing')
 
+    def test_title_h_only_number_bigger_than_6(self):
+        template = Template('{% load drc %} {% drc_title 9 %}')
+        rendered = template.render(Context({}))
+        soup = BeautifulSoup(rendered, 'html.parser')
+        h6_tag = soup.find('h6')
+
+        self.assertTrue(h6_tag, 'title tag missing')
+
 
 class ParagraphsTagTest(TestCase):
     TEMPLATE = Template('{% load drc %} {% drc_paragraphs 2 %}')
