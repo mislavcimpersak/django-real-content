@@ -106,9 +106,16 @@ class ImageTagTest(TestCase):
 
 
 class NumberTagTest(TestCase):
-    TEMPLATE = Template('{% load drc %} {% drc_number 1 100 %}')
-
     def test_number_shows_up(self):
-        rendered = self.TEMPLATE.render(Context({}))
+        template = Template('{% load drc %} {% drc_number 1 100 %}')
+        rendered = template.render(Context({}))
         number = int(rendered)
         self.assertTrue(1 < number <= 100, 'number out of bounds')
+
+    def test_number_value_error(self):
+        template = Template('{% load drc %} {% drc_number 1 "nope" %}')
+        rendered = template.render(Context({}))
+
+        self.assertEqual(rendered.strip(),
+            'please provide a number as an argument',
+            'argument of wrong type passed')
