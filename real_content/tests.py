@@ -119,3 +119,9 @@ class NumberTagTest(TestCase):
         self.assertEqual(rendered.strip(),
             'please provide a number as an argument',
             'argument of wrong type passed')
+
+    def test_number_when_2nd_number_bigger_than_1st(self):
+        template = Template('{% load drc %} {% drc_number 100 1 %}')
+        rendered = template.render(Context({}))
+        number = int(rendered)
+        self.assertTrue(1 < number <= 100, 'number out of bound')
