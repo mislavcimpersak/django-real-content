@@ -5,6 +5,7 @@ from django.test import TestCase
 
 from bs4 import BeautifulSoup
 
+from real_content.drc_utils import get_text_file
 from real_content.settings import DRC_MISSING_FILE_MSG, DRC_EMPTY_FILE_MSG
 
 
@@ -110,7 +111,7 @@ class NumberTagTest(TestCase):
         template = Template('{% load drc %} {% drc_number 1 100 %}')
         rendered = template.render(Context({}))
         number = int(rendered)
-        self.assertTrue(1 < number <= 100, 'number out of bounds')
+        self.assertTrue(1 <= number <= 100, 'number out of bounds')
 
     def test_number_value_error(self):
         template = Template('{% load drc %} {% drc_number 1 "nope" %}')
@@ -124,4 +125,15 @@ class NumberTagTest(TestCase):
         template = Template('{% load drc %} {% drc_number 100 1 %}')
         rendered = template.render(Context({}))
         number = int(rendered)
-        self.assertTrue(1 < number <= 100, 'number out of bound')
+        self.assertTrue(1 <= number <= 100, 'number out of bound')
+
+
+class GetTextFileTest(TestCase):
+    def test_existing_file(self):
+        text_file = get_text_file('en')
+        self.assertIsNotNone(text_file)
+        self.assertTrue(hasattr(text_file, 'read'))
+
+    def test_nonexisting_file(self):
+        text_file = get_text_file('xyz')
+        self.assertIsNone(text_file)
