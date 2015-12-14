@@ -2,6 +2,8 @@
 django-real-content
 ===================
 
+[![Build Status](https://travis-ci.org/mislavcimpersak/django-real-content.svg?branch=master)](https://travis-ci.org/mislavcimpersak/django-real-content)
+
 Template tags to quickly show real content instead of misleading `lorem
 ipsum <http://www.smashingmagazine.com/2010/01/06/lorem-ipsum-killing-designs/>`__.
 Useful to get a sense of real world content with fun local unicode
