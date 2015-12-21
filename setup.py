@@ -15,7 +15,7 @@ def read(fname):
 
 setup(
     name='django-real-content',
-    version='0.1.6',
+    version='0.1.7',
     packages=find_packages(),
     # packages=find_packages(exclude=("tests",)),
     include_package_data=True,
@@ -23,7 +23,7 @@ setup(
     description='Template tags to quickly show real content instead of lorem ipsum.',
     long_description=README,
     url='https://github.com/mislavcimpersak/django-real-content',
-    download_url='https://github.com/mislavcimpersak/django-real-content/tarball/0.1',
+    download_url='https://github.com/mislavcimpersak/django-real-content/tarball/0.1.7',
     author=u'Mislav Cimperšak',
     author_email='mislav.cimpersak@gmail.com',
     keywords='django real content lorem ipsum',
@@ -31,14 +31,19 @@ setup(
         'Django>=1.7',
         'beautifulsoup4>=4.3'
     ],
-    # tests are on the roadmap
-    # tests_require=[
-    #     'Django>=1.7',
-    # ],
+    tests_require=[
+        'Django>=1.7',
+        'beautifulsoup4>=4.3',
+        'coverage',
+        'tox'
+    ],
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Django',
+        'Framework :: Django :: 1.7',
+        'Framework :: Django :: 1.8',
+        'Framework :: Django :: 1.9',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',

@@ -1,3 +1,8 @@
+0.1.7
+=====
+- added more tests
+- took care of a few possible fringe cases in using templates
+
 0.1.6
 =====
 
