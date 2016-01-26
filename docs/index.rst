@@ -10,6 +10,8 @@ Django real content is a collection of template tags to quickly show real conten
 Useful to get a sense of real world content with fun local unicode
 characters.
 
+Works on Python >= 2.7 (including Python >= 3.5) and Django >= 1.6.
+
 You can view the source code for the project on `Github <https://github.com/mislav.cimpersak/django-real-content>`__.
 
 
