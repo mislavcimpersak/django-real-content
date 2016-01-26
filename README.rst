@@ -10,6 +10,8 @@ ipsum <http://www.smashingmagazine.com/2010/01/06/lorem-ipsum-killing-designs/>`
 Useful to get a sense of real world content with fun local unicode
 characters.
 
+Works on Python >= 2.7 (including Python >= 3.5) and Django >= 1.6.
+
 Documentation
 -------------
 `Read the Docs <http://django-real-content.readthedocs.org/>`__
