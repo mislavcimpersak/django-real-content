@@ -5,6 +5,9 @@ django-real-content
 .. image:: https://travis-ci.org/mislavcimpersak/django-real-content.svg?branch=master
     :target: https://travis-ci.org/mislavcimpersak/django-real-content
 
+.. image:: https://coveralls.io/repos/github/mislavcimpersak/django-real-content/badge.svg?branch=master :target: https://coveralls.io/github/mislavcimpersak/django-real-content?branch=master
+
+
 Template tags to quickly show real content instead of misleading `lorem
 ipsum <http://www.smashingmagazine.com/2010/01/06/lorem-ipsum-killing-designs/>`__.
 Useful to get a sense of real world content with fun local unicode
