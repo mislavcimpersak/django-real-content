@@ -5,8 +5,12 @@ from django.test import TestCase
 
 from bs4 import BeautifulSoup
 
-from real_content.drc_utils import get_text_file
-from real_content.settings import DRC_MISSING_FILE_MSG, DRC_EMPTY_FILE_MSG
+from real_content.drc_utils import get_language, get_text_file, save_content
+from real_content.settings import (
+    DRC_MISSING_FILE_MSG,
+    DRC_EMPTY_FILE_MSG,
+    DRC_LANGUAGE
+    )
 
 
 class TitleTagTest(TestCase):
@@ -128,6 +132,13 @@ class NumberTagTest(TestCase):
         self.assertTrue(1 <= number <= 100, 'number out of bound')
 
 
+class GetLanguage(TestCase):
+    def test_get_language(self):
+        self.assertEqual(DRC_LANGUAGE, get_language())
+        self.assertNotEqual('hr', get_language())
+        self.assertEqual('hr', get_language('hr'))
+
+
 class GetTextFileTest(TestCase):
     def test_existing_file(self):
         text_file = get_text_file('en')
@@ -137,3 +148,33 @@ class GetTextFileTest(TestCase):
     def test_nonexisting_file(self):
         text_file = get_text_file('xyz')
         self.assertIsNone(text_file)
+
+
+class SaveContentTest(TestCase):
+    def setUp(self):
+        content = (
+                '<!DOCTYPE html>'
+                '<html>'
+                '<body>'
+                '<h1>My First Heading</h1>'
+                '<p>My first paragraph.</p>'
+                '<p>My second paragraph.</p>'
+                '<h2>My Second Heading</h2>'
+                '<p>My third paragraph.</p>'
+                '</body>'
+                '</html>'
+            )
+        self.soup = BeautifulSoup(content, 'html.parser')
+
+    def test_save(self):
+        save_content(self.soup, 'p', text_type='paragraphs',
+            language='test_lang', min_length=10)
+
+        text_file = get_text_file('test_lang', text_type='paragraphs')
+        self.assertIsNotNone(text_file)
+        self.assertTrue(hasattr(text_file, 'read'))
+
+        lines = text_file.read().splitlines()
+        clean_lines = [line for line in lines
+            if line.startswith('#') is False and line.strip() != '']
+        self.assertEqual(len(clean_lines), 3)
