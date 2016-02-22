@@ -25,7 +25,7 @@ def random_lines(text_file, no_of_lines=1):
         return DRC_MISSING_FILE_MSG
     lines = text_file.read().splitlines()
     clean_lines = [line for line in lines
-        if line.startswith('#') is False or line.strip() == '']
+        if line.startswith('#') is False and line.strip() != '']
 
     if clean_lines == []:
         return DRC_EMPTY_FILE_MSG
