@@ -20,8 +20,12 @@ env:
 install:
   - pip install -q Django==$DJANGO_VERSION
   - pip install beautifulsoup4
+  - pip install coveralls
   - pip install tox
   - python setup.py -q install
 
 script:
   - tox
+
+after_success:
+  - coveralls
