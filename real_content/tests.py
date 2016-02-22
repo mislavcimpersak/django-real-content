@@ -5,7 +5,12 @@ from django.test import TestCase
 
 from bs4 import BeautifulSoup
 
-from real_content.drc_utils import get_language, get_text_file, save_content
+from real_content.drc_utils import (
+    get_language,
+    get_text_file,
+    save_content,
+    parse_url
+    )
 from real_content.settings import (
     DRC_MISSING_FILE_MSG,
     DRC_EMPTY_FILE_MSG,
@@ -165,12 +170,21 @@ class SaveContentTest(TestCase):
                 '</html>'
             )
         self.soup = BeautifulSoup(content, 'html.parser')
+        self.lang = 'test_lang'
+
+        # deleting the old file from previous tests
+        import os
+        content_dir = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), 'content'))
+        content_file_path = os.path.join(
+            content_dir, '{}_{}.txt'.format(self.lang, 'paragraphs'))
+        os.remove(content_file_path)
 
     def test_save(self):
         save_content(self.soup, 'p', text_type='paragraphs',
-            language='test_lang', min_length=10)
+            url='www.example.com', language=self.lang, min_length=10)
 
-        text_file = get_text_file('test_lang', text_type='paragraphs')
+        text_file = get_text_file(self.lang, text_type='paragraphs')
         self.assertIsNotNone(text_file)
         self.assertTrue(hasattr(text_file, 'read'))
 
@@ -178,3 +192,20 @@ class SaveContentTest(TestCase):
         clean_lines = [line for line in lines
             if line.startswith('#') is False and line.strip() != '']
         self.assertEqual(len(clean_lines), 3)
+
+        self.assertTrue(any(line for line in lines
+            if line.startswith('# www.example.com')))
+
+
+class ParseUrl(TestCase):
+    def setUp(self):
+        self.real_url = 'https://www.yahoo.com'
+        self.fake_url = 'http://www.jibber-jabber-asdasdasd-asffgdsgg.com'
+        self.lang = 'test_lang'
+
+    def test_parse_url(self):
+        result = parse_url(self.real_url, self.lang)
+        self.assertEqual(result, 'success!')
+
+        result = parse_url(self.fake_url, self.lang)
+        self.assertEqual(result, 'error getting content from url')

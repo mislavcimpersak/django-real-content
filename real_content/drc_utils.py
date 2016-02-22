@@ -5,9 +5,9 @@ from datetime import datetime
 import os
 
 try:
-    from urllib.request import urlopen, HTTPError  # py3
+    from urllib.request import urlopen, HTTPError, URLError  # py3
 except ImportError:
-    from urllib2 import urlopen, HTTPError  # py2
+    from urllib2 import urlopen, HTTPError, URLError  # py2
 from bs4 import BeautifulSoup
 
 from real_content.settings import DRC_LANGUAGE
@@ -100,5 +100,5 @@ def parse_url(url, language=''):
                 language=language, min_length=20)
         return 'success!'
 
-    except HTTPError:
-        return '403 error'
+    except (HTTPError, URLError):
+        return 'error getting content from url'
