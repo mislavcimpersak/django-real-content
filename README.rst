@@ -5,7 +5,8 @@ django-real-content
 .. image:: https://travis-ci.org/mislavcimpersak/django-real-content.svg?branch=master
     :target: https://travis-ci.org/mislavcimpersak/django-real-content
 
-.. image:: https://coveralls.io/repos/github/mislavcimpersak/django-real-content/badge.svg?branch=master :target: https://coveralls.io/github/mislavcimpersak/django-real-content?branch=master
+.. image:: https://coveralls.io/repos/github/mislavcimpersak/django-real-content/badge.svg?branch=master
+    :target: https://coveralls.io/github/mislavcimpersak/django-real-content?branch=master
 
 
 Template tags to quickly show real content instead of misleading `lorem
