@@ -1,3 +1,7 @@
+0.1.9
+=====
+- coveralls badge fix that's bugging me
+
 0.1.8
 =====
 - django 1.6 support check
