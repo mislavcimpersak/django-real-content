@@ -1,3 +1,9 @@
+0.1.8
+=====
+- django 1.6 support check
+- better check if empty line in language file
+- added more tests
+
 0.1.7
 =====
 - added more tests
