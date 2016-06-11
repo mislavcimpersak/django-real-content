@@ -1,3 +1,7 @@
+0.1.10
+======
+- removed titles from polish list of titles that weren't actually titles
+
 0.1.9
 =====
 - coveralls badge fix that's bugging me
