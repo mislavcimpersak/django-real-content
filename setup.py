@@ -15,7 +15,7 @@ def read(fname):
 
 setup(
     name='django-real-content',
-    version='0.1.10',
+    version='0.1.11',
     packages=find_packages(),
     # packages=find_packages(exclude=("tests",)),
     include_package_data=True,
@@ -23,7 +23,7 @@ setup(
     description='Template tags to quickly show real content instead of lorem ipsum.',
     long_description=README,
     url='https://github.com/mislavcimpersak/django-real-content',
-    download_url='https://github.com/mislavcimpersak/django-real-content/tarball/0.1.10',
+    download_url='https://github.com/mislavcimpersak/django-real-content/tarball/0.1.11',
     author=u'Mislav Cimperšak',
     author_email='mislav.cimpersak@gmail.com',
     keywords='django real content lorem ipsum',

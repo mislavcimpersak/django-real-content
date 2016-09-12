@@ -1,3 +1,7 @@
+0.1.11
+======
+- added support for Django 1.10
+
 0.1.10
 ======
 - removed titles from polish list of titles that weren't actually titles
