@@ -2,7 +2,10 @@ language: python
 
 python:
   - 2.7
+  - 3.4
   - 3.5
+  - 3.6
+  - 3.7
 
 addons:
   apt:
@@ -11,18 +14,55 @@ addons:
     packages:
       - python3.5
 
-env:
-  - DJANGO_VERSION=1.6.11
-  - DJANGO_VERSION=1.7.11
-  - DJANGO_VERSION=1.8.18
-  - DJANGO_VERSION=1.9.13
-  - DJANGO_VERSION=1.10.6
-  - DJANGO_VERSION=1.11.3
-  - DJANGO_VERSION=2.0.13
-  - DJANGO_VERSION=2.1.7
+cache:
+  directories:
+    - $HOME/.cache/pip
+before_cache:
+  - rm -f $HOME/.cache/pip/log/debug.log
+matrix:
+    include:
+      # py27
+      - python: 2.7
+        env: TOX_ENV=py27-django18
+      - python: 2.7
+        env: TOX_ENV=py27-django19
+      - python: 2.7
+        env: TOX_ENV=py27-django110
+      - python: 2.7
+        env: TOX_ENV=py27-django111
+      # py34
+      - python: 3.4
+        env: TOX_ENV=py34-django111
+      - python: 3.4
+        env: TOX_ENV=py34-django20
+      - python: 3.4
+        env: TOX_ENV=py34-django21
+      # py35
+      - python: 3.5
+        env: TOX_ENV=py35-django111
+      - python: 3.5
+        env: TOX_ENV=py35-django20
+      - python: 3.5
+        env: TOX_ENV=py35-django21
+      # py36
+      - python: 3.6
+        env: TOX_ENV=py36-django111
+      - python: 3.6
+        env: TOX_ENV=py36-django20
+      - python: 3.6
+        env: TOX_ENV=py36-django21
+      # py37
+      - python: 3.7
+        env: TOX_ENV=py37-django111
+      - python: 3.7
+        env: TOX_ENV=py37-django20
+      - python: 3.7
+        env: TOX_ENV=py37-django21
+
+script: tox -e $TOX_ENV
 
 install:
-  - pip install -q Django==$DJANGO_VERSION
+  - pip install pip setuptools wheel -U
   - pip install beautifulsoup4
   - pip install coveralls
   - pip install tox
