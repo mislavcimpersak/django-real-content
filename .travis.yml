@@ -48,8 +48,8 @@ script: tox -e $TOX_ENV
 
 install:
   - pip install pip setuptools wheel -U
-  - python setup.py -q install
   - pip install -q Django==$DJANGO_VERSION
+  - python setup.py -q install
   - pip install coveralls
   - pip install tox
 
