@@ -1,33 +1,63 @@
 language: python
 
-python:
-  - 2.7
-  - 3.5
+cache:
+  directories:
+    - $HOME/.cache/pip
+before_cache:
+  - rm -f $HOME/.cache/pip/log/debug.log
 
-addons:
-  apt:
-    sources:
-      - deadsnakes
-    packages:
-      - python3.5
+matrix:
+    include:
+      # py27
+      - python: 2.7
+        env: TOX_ENV=py27-django18, DJANGO_VERSION=1.8.19
+      - python: 2.7
+        env: TOX_ENV=py27-django19, DJANGO_VERSION=1.9.13
+      - python: 2.7
+        env: TOX_ENV=py27-django110, DJANGO_VERSION=1.10.8
+      - python: 2.7
+        env: TOX_ENV=py27-django111, DJANGO_VERSION=1.11.20
+      # py34
+      - python: 3.4
+        env: TOX_ENV=py34-django111, DJANGO_VERSION=1.11.20
+      - python: 3.4
+        env: TOX_ENV=py34-django20, DJANGO_VERSION=2.0.13
+      # py35
+      - python: 3.5
+        env: TOX_ENV=py35-django111, DJANGO_VERSION=1.11.20
+      - python: 3.5
+        env: TOX_ENV=py35-django20, DJANGO_VERSION=2.0.13
+      - python: 3.5
+        env: TOX_ENV=py35-django21, DJANGO_VERSION=2.1.7
+      # py36
+      - python: 3.6
+        env: TOX_ENV=py36-django111, DJANGO_VERSION=1.11.20
+      - python: 3.6
+        env: TOX_ENV=py36-django20, DJANGO_VERSION=2.0.13
+      - python: 3.6
+        env: TOX_ENV=py36-django21, DJANGO_VERSION=2.1.7
+      # py37
+      - python: 3.7
+        dist: xenial
+        sudo: true
+        env: TOX_ENV=py37-django111, DJANGO_VERSION=1.11.20
+      - python: 3.7
+        dist: xenial
+        sudo: true
+        env: TOX_ENV=py37-django20, DJANGO_VERSION=2.0.13
+      - python: 3.7
+        dist: xenial
+        sudo: true
+        env: TOX_ENV=py37-django21, DJANGO_VERSION=2.1.7
 
-env:
-  - DJANGO_VERSION=1.6.11
-  - DJANGO_VERSION=1.7.11
-  - DJANGO_VERSION=1.8.18
-  - DJANGO_VERSION=1.9.13
-  - DJANGO_VERSION=1.10.6
-  - DJANGO_VERSION=1.11.3
+script: tox -e $TOX_ENV
 
 install:
+  - pip install pip setuptools wheel -U
   - pip install -q Django==$DJANGO_VERSION
-  - pip install beautifulsoup4
+  - python setup.py -q install
   - pip install coveralls
   - pip install tox
-  - python setup.py -q install
-
-script:
-  - tox
 
 after_success:
   - coveralls
